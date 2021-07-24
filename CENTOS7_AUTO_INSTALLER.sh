@@ -51,7 +51,7 @@ rpcuser=zortcoinrpc
 rpcpassword=${PASS_WORD}
 EOF
 
-sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
+sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 
 
 cronjob_editor () {         
