@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[zortcoin.qt-translation-021x]
+file_filter = src/qt/locale/zortcoin_<lang>.ts
+source_file = src/qt/locale/zortcoin_en.ts
+source_lang = en

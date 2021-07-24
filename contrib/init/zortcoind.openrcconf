@@ -1,0 +1,33 @@
+# /etc/conf.d/zortcoind: config file for /etc/init.d/zortcoind
+
+# Config file location
+#ZORTCOInD_CONFIGFILE="/etc/zortcoin/zortcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $ZORTCOInD_USER)
+#ZORTCOInD_PIDDIR="/var/run/zortcoind"
+
+# What filename to give the pidfile
+#ZORTCOInD_PIDFILE="${ZORTCOInD_PIDDIR}/zortcoind.pid"
+
+# Where to write zortcoind data (be mindful that the blockchain is large)
+#ZORTCOInD_DATADIR="/var/lib/zortcoind"
+
+# User and group to own zortcoind process
+#ZORTCOInD_USER="zortcoin"
+#ZORTCOInD_GROUP="zortcoin"
+
+# Path to zortcoind executable
+#ZORTCOInD_BIN="/usr/bin/zortcoind"
+
+# Nice value to run zortcoind under
+#ZORTCOInD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#ZORTCOInD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for zortcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+ZORTCOInD_SIGTERM_TIMEOUT=600

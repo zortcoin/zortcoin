@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  zortcoind The zortcoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: zortcoind
+# processname: zortcoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/zortcoind, see below
+if [ -f /etc/sysconfig/zortcoind ]; then
+        . /etc/sysconfig/zortcoind
+fi
+
+RETVAL=0
+
+prog=zortcoind
+# you can override the lockfile via ZORTCOInD_LOCKFILE in /etc/sysconfig/zortcoind
+lockfile=${ZORTCOInD_LOCKFILE-/var/lock/subsys/zortcoind}
+
+# zortcoind defaults to /usr/bin/zortcoind, override with ZORTCOInD_BIN
+zortcoind=${ZORTCOInD_BIN-/usr/bin/zortcoind}
+
+# zortcoind opts default to -disablewallet, override with ZORTCOInD_OPTS
+zortcoind_opts=${ZORTCOInD_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $zortcoind $zortcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -t600
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
