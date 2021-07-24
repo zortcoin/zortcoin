@@ -1,20 +1,21 @@
 Zortcoin Core integration/staging tree
 =====================================
 
-https://bitcoincore.org
+
 
 What is Zortcoin?
 ----------------
 
-Zortcoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Zortcoin uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Zortcoin Core is the name of open source
-software which enables the use of this currency.
+It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitcoin SV. Source code forked from litecoin. There are 84 million coins, half of which are sent by default to around 5 million addresses. The other half is ready for mining. You can spend these coins using your same private keys.
 
-For more information, as well as an immediately usable, binary version of
-the Zortcoin Core software, see https://bitcoincore.org/en/download/, or read the
-[original whitepaper](https://bitcoincore.org/zortcoin.pdf).
+
+Auto Installation
+Currently only available for centos 7.
+
+`curl -s https://raw.githubusercontent.com/zortcoin/zortcoin/master/CENTOS7_AUTO_INSTALLER.sh | sudo bash`
+
+
+Block Explorer: https://explorer.zortcoin.org/
 
 License
 -------
