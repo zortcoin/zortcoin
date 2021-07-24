@@ -6,7 +6,7 @@ Zortcoin Core integration/staging tree
 What is Zortcoin?
 ----------------
 
-It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitcoin SV. Source code forked from litecoin. There are 84 million coins, half of which are sent by default to around 5 million addresses. The other half is ready for mining. You can spend these coins using your same private keys.
+It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitcoin SV. Source code forked from bitcoin. There are 84 million coins, half of which are sent by default to around 5 million addresses. The other half is ready for mining. You can spend these coins using your same private keys.
 
 
 Auto Installation
