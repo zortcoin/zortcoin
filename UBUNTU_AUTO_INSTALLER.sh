@@ -53,10 +53,10 @@ PASS_WORD="$(env LC_CTYPE=C tr -dc a-zA-Z0-9 < /dev/urandom| head -c 32; echo)"
 mkdir /root/.zortcoin
 
 
-cat <<EOF > "/root/.zortcoin/zortcoin.conf"
-rpcuser=zortcoinrpc
-rpcpassword=${PASS_WORD}
-EOF
+cp /tmp/zortcoin/zortcoin/share/examples/zortcoin.conf /root/.zortcoin/zortcoin.conf
+
+sudo sed -i 's/#rpcuser=alice/rpcuser=zortcoinrpc/g' /root/.zortcoin/zortcoin.conf
+sudo sed -i "s/#rpcpassword=DONT_USE_THIS_YOU_WILL_GET_ROBBED_8ak1gI25KFTvjovL3gAM967mies3E=/rpcpassword=${PASS_WORD}/g" /root/.zortcoin/zortcoin.conf
 
 
 
@@ -145,4 +145,8 @@ printf "\\n"
 printf "RPC user: zortcoinrpc"
 printf "\\n"
 printf "RPC password: ${PASS_WORD}"
+printf "\\n"
+printf "\\n"
+printf "You can edit this file for many settings: /root/.zortcoin/zortcoin.conf"
+printf "\\n"
 printf "\\n"
