@@ -11,9 +11,13 @@ It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitco
 
 Auto Installation
 
-Currently only available for centos 7.
+for centos 7:
 
 `curl -s https://raw.githubusercontent.com/zortcoin/zortcoin/master/CENTOS7_AUTO_INSTALLER.sh | sudo bash`
+
+for ubuntu 18:
+
+`wget -qO - https://raw.githubusercontent.com/zortcoin/zortcoin/master/UBUNTU_AUTO_INSTALLER.sh | sudo bash`
 
 
 Block Explorer: https://explorer.zortcoin.org/
