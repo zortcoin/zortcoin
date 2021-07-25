@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 printf "
 ███████╗ ██████╗ ██████╗ ████████╗ ██████╗ ██████╗ ██╗███╗   ██╗
 ╚══███╔╝██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║████╗  ██║
@@ -89,7 +89,20 @@ iptables -I INPUT -p tcp --dport 38332 -j ACCEPT
 iptables -I INPUT -p tcp --dport 18444 -j ACCEPT
 iptables -I INPUT -p tcp --dport 18443 -j ACCEPT
 
+ip6tables -I INPUT -p tcp --dport 8333 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 8332 -j ACCEPT
+
+ip6tables -I INPUT -p tcp --dport 18333 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 18332 -j ACCEPT
+
+ip6tables -I INPUT -p tcp --dport 38333 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 38332 -j ACCEPT
+
+ip6tables -I INPUT -p tcp --dport 18444 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 18443 -j ACCEPT
+
 service iptables save
+service ip6tables save
 
 printf "\\n"
 printf "Please reboot system so the daemon can start."
