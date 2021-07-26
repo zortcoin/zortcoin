@@ -75,8 +75,21 @@ fi
 cronjob_editor "@reboot" "sudo /usr/local/bin/zortcoind -deprecatedrpc=generate -listen -rpcallowip=0.0.0.0/0 -rpcbind=0.0.0.0 -bind=0.0.0.0 -connect=dnsseed.zortcoin.org -daemon" "add"
 
 
-yum -y remove firewalld
-yum -y install iptables iptables-services
+sudo systemctl stop firewalld
+
+sudo systemctl disable firewalld
+
+sudo systemctl mask --now firewalld
+
+sudo yum -y remove firewalld
+
+sudo yum -y install iptables iptables-services
+
+sudo systemctl start iptables
+
+sudo systemctl enable iptables
+
+sudo systemctl status iptables
 
 iptables -I INPUT -p tcp --dport 8333 -j ACCEPT
 iptables -I INPUT -p tcp --dport 8332 -j ACCEPT
