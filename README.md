@@ -40,6 +40,7 @@ Get Wallet Addresses
 `sudo zortcoin-cli getaddressesbylabel ""`
 
 Send 10 ZTC
+
 `sudo zortcoin-cli sendtoaddress "Zortcoinadresshere" 10`
 
 
