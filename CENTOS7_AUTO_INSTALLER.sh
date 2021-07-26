@@ -75,48 +75,7 @@ fi
 cronjob_editor "@reboot" "sudo /usr/local/bin/zortcoind -deprecatedrpc=generate -listen -rpcallowip=0.0.0.0/0 -rpcbind=0.0.0.0 -bind=0.0.0.0 -connect=dnsseed.zortcoin.org -daemon" "add"
 
 
-sudo systemctl stop firewalld
 
-sudo systemctl disable firewalld
-
-sudo systemctl mask --now firewalld
-
-sudo yum -y remove firewalld
-
-sudo yum -y install iptables iptables-services
-
-sudo systemctl start iptables
-
-sudo systemctl enable iptables
-
-sudo systemctl status iptables
-
-iptables -I INPUT -p tcp --dport 8333 -j ACCEPT
-iptables -I INPUT -p tcp --dport 8332 -j ACCEPT
-
-iptables -I INPUT -p tcp --dport 18333 -j ACCEPT
-iptables -I INPUT -p tcp --dport 18332 -j ACCEPT
-
-iptables -I INPUT -p tcp --dport 38333 -j ACCEPT
-iptables -I INPUT -p tcp --dport 38332 -j ACCEPT
-
-iptables -I INPUT -p tcp --dport 18444 -j ACCEPT
-iptables -I INPUT -p tcp --dport 18443 -j ACCEPT
-
-ip6tables -I INPUT -p tcp --dport 8333 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 8332 -j ACCEPT
-
-ip6tables -I INPUT -p tcp --dport 18333 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 18332 -j ACCEPT
-
-ip6tables -I INPUT -p tcp --dport 38333 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 38332 -j ACCEPT
-
-ip6tables -I INPUT -p tcp --dport 18444 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 18443 -j ACCEPT
-
-service iptables save
-service ip6tables save
 
 printf "\\n"
 printf "Please reboot system so the daemon can start."
