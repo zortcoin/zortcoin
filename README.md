@@ -35,7 +35,7 @@ Create Wallet
 
 `sudo zortcoin-cli createwallet ""`
 
-Get Wallet Addresses
+Get Your Wallet Address
 
 `sudo zortcoin-cli getaddressesbylabel ""`
 
