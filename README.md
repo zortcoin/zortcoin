@@ -18,7 +18,9 @@ Auto Compile From Source
 
 for centos 7:
 
-````curl -s https://raw.githubusercontent.com/zortcoin/zortcoin/master/CENTOS7_AUTO_INSTALLER.sh | sudo bash````
+````
+curl -s https://raw.githubusercontent.com/zortcoin/zortcoin/master/CENTOS7_AUTO_INSTALLER.sh | sudo bash
+````
 
 for ubuntu 18 & 20:
 
