@@ -24,7 +24,9 @@ curl -s https://raw.githubusercontent.com/zortcoin/zortcoin/master/CENTOS7_AUTO_
 
 for ubuntu 18 & 20:
 
-`wget -qO - https://raw.githubusercontent.com/zortcoin/zortcoin/master/UBUNTU_AUTO_INSTALLER.sh | sudo bash`
+````
+wget -qO - https://raw.githubusercontent.com/zortcoin/zortcoin/master/UBUNTU_AUTO_INSTALLER.sh | sudo bash
+````
 
 
 Simple Usage
@@ -32,20 +34,22 @@ Simple Usage
 
 If you have a desktop, you can use the graphical interface.
 
-`sudo zortcoin-qt`
+````
+sudo zortcoin-qt
+````
 
 
 Create Wallet
 
-`sudo zortcoin-cli createwallet ""`
+````sudo zortcoin-cli createwallet ""````
 
 Get Your Wallet Address
 
-`sudo zortcoin-cli getaddressesbylabel ""`
+````sudo zortcoin-cli getaddressesbylabel ""````
 
 Send 10 ZTC
 
-`sudo zortcoin-cli sendtoaddress "Zortcoinadresshere" 10`
+````sudo zortcoin-cli sendtoaddress "Zortcoinadresshere" 10````
 
 
 License
