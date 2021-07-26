@@ -1,6 +1,3 @@
-Zortcoin Core integration/staging tree
-=====================================
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/zortcoin/zortcoin/master/share/pixmaps/zortcoin256.png" />
 </p>
