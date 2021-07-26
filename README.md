@@ -11,19 +11,37 @@ It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitco
 
 
 
-Auto Installation
-(it may take a long time)
+Auto Compile From Source
+(Compilation may take a long time. You can download the already compiled version from the releases section!)
 
 for centos 7:
 
 `curl -s https://raw.githubusercontent.com/zortcoin/zortcoin/master/CENTOS7_AUTO_INSTALLER.sh | sudo bash`
 
-for ubuntu 18:
+for ubuntu 18 & 20:
 
 `wget -qO - https://raw.githubusercontent.com/zortcoin/zortcoin/master/UBUNTU_AUTO_INSTALLER.sh | sudo bash`
 
 
-Block Explorer: https://explorer.zortcoin.org/
+Simple Usage
+----------------
+
+If you have a desktop, you can use the graphical interface.
+
+`sudo zortcoin-qt`
+
+
+Create Wallet
+
+`sudo zortcoin-cli createwallet ""`
+
+Get Wallet Addresses
+
+`sudo zortcoin-cli getaddressesbylabel ""`
+
+Send 10 ZTC
+`sudo zortcoin-cli sendtoaddress "Zortcoinadresshere" 10`
+
 
 License
 -------
