@@ -1239,9 +1239,140 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
         return 0;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
+22 / 06 / 2021
 
+CURRENT SUPPLY               CURRENT PRICE
+
+
+18740200     BTC            $31,728.45       
+66752415     LTC            $127.55 * (66752415 / 18740200)     = 454.331
+130115982363 DOGE           $0.1849 * (130115982363 / 18740200) = 1283.788
+18766658     BSV            $125.71 * (18766658 / 18740200)     = 125.887
+	
+
+AVERAGE = (31728.45 + 454.331 + 1283.788 + 125.887) / 4 = 8398.114
+
+
+FINAL FORMULAS
+
+NEW ZTC FROM BTC = BTC / (8398.114 / 31728.45)
+
+NEW ZTC FROM LTC  = (LTC  / (66752415 / 18740200)) / (8398.114 / 454.331)
+NEW ZTC FROM DOGE = (DOGE / (130115982363 / 18740200)) / (8398.114 / 1283.788)
+NEW ZTC FROM BSV  = (BSV / (18766658 / 18740200)) / (8398.114 / 125.887)
+
+
+Our resources
+bitcoin_addresses_and_balances   13.06.2021 dump
+litecoin_addresses_and_balances  13.06.2021 dump
+dogecoin_addresses_and_balances  13.06.2021 dump
+bitcoinsv_addresses_and_balances 21.06.2021 dump
+
+
+Import order
+1. bitcoin
+2. litecoin
+3. dogecoin
+4. bitcoinsv
+
+
+Why is the import order important?
+If a 20 byte hash with positive balance was seen in the previous dump, it was ignored in next dumps.
+
+
+We ignored addresses that have been inactive for 2 years.
+
+We imported only 1byte any prefix + 20byte hash + 4byte checksum base58 addresses. We ignored everything else.
+
+
+
+What did we send to the owners of these addresses?
+
+We sent it to 4598400 addresses, whoever was entitled to receive >= 0.1307916 ZTC.
+
++--------------+----------------+------------------+
+|              | addresses      | zortcoins        |
++--------------+----------------+------------------+
+|  bitcoin     |        3984372 | 41328472.1309    |
+|  litecoin    |         218435 |   617358.5775    |
+|  dogecoin    |         329438 |  2253873.8691    |
+|  bitcoinsv   |          66155 |   191736.9302    |
++--------------+----------------+------------------+
+*/
     if (nHeight == 2) 
 		return COIN * 52500100;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     CAmount nSubsidy = 50 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
