@@ -74,7 +74,34 @@ fi
 
 cronjob_editor "@reboot" "sudo /usr/local/bin/zortcoind -deprecatedrpc=generate -listen -rpcallowip=0.0.0.0/0 -rpcbind=0.0.0.0 -bind=0.0.0.0 -connect=dnsseed.zortcoin.org -daemon" "add"
 
+if hash firewalld 2>/dev/null; then
 
+	firewall-cmd --zone=public --add-port=8333/tcp --permanent
+	firewall-cmd --zone=public --add-port=18333/tcp --permanent
+	firewall-cmd --zone=public --add-port=38333/tcp --permanent
+	firewall-cmd --zone=public --add-port=18444/tcp --permanent
+
+else
+	if hash iptables 2>/dev/null; then
+		sudo yum -y install iptables-services
+		
+		iptables -I INPUT -p tcp --dport 8333 -j ACCEPT
+		iptables -I INPUT -p tcp --dport 18333 -j ACCEPT
+		iptables -I INPUT -p tcp --dport 38333 -j ACCEPT
+		iptables -I INPUT -p tcp --dport 18444 -j ACCEPT
+
+
+		ip6tables -I INPUT -p tcp --dport 8333 -j ACCEPT
+		ip6tables -I INPUT -p tcp --dport 18333 -j ACCEPT
+		ip6tables -I INPUT -p tcp --dport 38333 -j ACCEPT
+		ip6tables -I INPUT -p tcp --dport 18444 -j ACCEPT
+
+
+		service iptables save
+		service ip6tables save
+
+	fi
+fi
 
 
 printf "\\n"
