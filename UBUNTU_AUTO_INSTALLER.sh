@@ -89,28 +89,28 @@ cronjob_editor "@reboot" "sudo /usr/local/bin/zortcoind -deprecatedrpc=generate 
 
 
 iptables -I INPUT -p tcp --dport 8333 -j ACCEPT
-iptables -I INPUT -p tcp --dport 8332 -j ACCEPT
+
 
 iptables -I INPUT -p tcp --dport 18333 -j ACCEPT
-iptables -I INPUT -p tcp --dport 18332 -j ACCEPT
+
 
 iptables -I INPUT -p tcp --dport 38333 -j ACCEPT
-iptables -I INPUT -p tcp --dport 38332 -j ACCEPT
+
 
 iptables -I INPUT -p tcp --dport 18444 -j ACCEPT
-iptables -I INPUT -p tcp --dport 18443 -j ACCEPT
+
 
 ip6tables -I INPUT -p tcp --dport 8333 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 8332 -j ACCEPT
+
 
 ip6tables -I INPUT -p tcp --dport 18333 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 18332 -j ACCEPT
+
 
 ip6tables -I INPUT -p tcp --dport 38333 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 38332 -j ACCEPT
+
 
 ip6tables -I INPUT -p tcp --dport 18444 -j ACCEPT
-ip6tables -I INPUT -p tcp --dport 18443 -j ACCEPT
+
 
 
 echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
