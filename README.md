@@ -11,7 +11,7 @@ It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitco
 
 
 Auto Compile From Source
-(Compilation may take a long time. You can download the already compiled version from the releases section!)
+(Compilation may take a long time!)
 
 for centos 7:
 
