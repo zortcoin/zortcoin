@@ -14,6 +14,10 @@ Download
 
 [zortcoin-0.21.1-win64-setup.exe](https://github.com/zortcoin/zortcoin/releases/download/v0.21.1/zortcoin-0.21.1-win64-setup.exe) for Windows 64 Bit
 
+Online Wallet
+----------------
+
+[https://wallet.zortcoin.org/](https://wallet.zortcoin.org/)
 
 
 Compile from source
