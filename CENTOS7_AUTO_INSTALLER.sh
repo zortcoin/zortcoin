@@ -66,13 +66,13 @@ if [[ "$3" == add ]] ;then
     ( crontab -l | grep -v -F -w "$2" ; echo "$1 $2" ) | crontab -
 elif [[ "$3" == remove ]] ;then
     # remove cronjob:
-    ( crontab -l | grep -v -F -w "$2" ) | crontab -
+    ( crontab -l | grep -v "$2" ) | crontab -
 fi 
 } 
 
 
 
-cronjob_editor "@reboot" "sudo /usr/local/bin/zortcoind -deprecatedrpc=generate -listen -rpcallowip=0.0.0.0/0 -rpcbind=0.0.0.0 -bind=0.0.0.0 -connect=dnsseed.zortcoin.org -daemon" "remove"
+cronjob_editor "@reboot" "/usr/local/bin/zortcoind" "remove"
 
 cronjob_editor "@reboot" "sudo /usr/local/bin/zortcoind -listen -rpcallowip=0.0.0.0/0 -rpcbind=0.0.0.0 -bind=0.0.0.0 -daemon" "add"
 
