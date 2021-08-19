@@ -20,7 +20,7 @@ Online Wallet
 [https://wallet.zortcoin.org/](https://wallet.zortcoin.org/)
 
 
-Compile from source
+Build from source
 ----------------
 
 (Compilation may take a long time!)
