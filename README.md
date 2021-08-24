@@ -8,11 +8,11 @@ What is Zortcoin?
 It is a mixture of 4 different blockchains Bitcoin, Litecoin, Dogecoin and Bitcoin SV. Source code forked from bitcoin. There are 84 million coins, half of which are sent by default to around 5 million addresses. The other half is ready for mining. You can spend these coins using your same private keys.
 
 
-
 Download
 ----------------
 
 [zortcoin-0.21.1-win64-setup.exe](https://github.com/zortcoin/zortcoin/releases/download/v0.21.1/zortcoin-0.21.1-win64-setup.exe) for Windows 64 Bit
+
 
 Online Wallet
 ----------------
@@ -20,7 +20,7 @@ Online Wallet
 [https://wallet.zortcoin.org/](https://wallet.zortcoin.org/)
 
 
-Build from source
+Build From Source
 ----------------
 
 (Compilation may take a long time!)
