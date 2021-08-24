@@ -64,7 +64,7 @@ Get Your Wallet Address
 
 Send 10 ZTC
 
-````sudo zortcoin-cli sendtoaddress "Zortcoinadresshere" 10````
+````sudo zortcoin-cli sendtoaddress "ZortcoinAddressHere" 10````
 
 
 License
