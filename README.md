@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zortcoin/zortcoin/master/share/pixmaps/zortcoin128.png" />
+  <a href="https://explorer.zortcoin.org/"><img src="https://raw.githubusercontent.com/zortcoin/zortcoin/master/share/pixmaps/zortcoin128.png" /></a>
 </p>
 
 What is Zortcoin?
